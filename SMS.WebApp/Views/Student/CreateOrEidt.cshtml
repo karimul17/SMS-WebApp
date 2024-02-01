@@ -1,0 +1,43 @@
+﻿@model SMS.WebApp.Models.Studdent
+@{
+
+}
+
+<div class=" container">
+    <form asp-controller="Student" asp-action="CreateOrEidt" method="post">
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class=" form-control" />
+            </div>
+            <div class="col-6">
+                <label asp-for="Phone"></label>
+                <input asp-for="Phone" type="number" class=" form-control" />
+            </div>
+            <div class="col-6">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class=" form-control" />
+            </div>
+            <div class="col-6">
+                <label asp-for="City"></label>
+                <input asp-for="City" class=" form-control" />
+            </div>
+            <div class="col-6">
+                <label asp-for="Address"></label>
+                <textarea asp-for="Address" class=" form-control"></textarea>
+            </div>
+            <div class="col-6 mt-4">
+                <input type="submit" class=" btn btn-sm btn-primary " />
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} 
